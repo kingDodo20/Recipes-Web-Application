@@ -1,0 +1,153 @@
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 48px 0 96px 0; 
+}
+
+.hero {
+  max-width: 1300px; 
+  margin: 0 auto;
+  padding: 0 32px; 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px; 
+  align-items: center;
+}
+
+.hero-description {
+  font-size: 20px; 
+  line-height: 1.6;
+  margin-bottom: 48px; 
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.heading-primary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+  font-size: 52px; 
+  line-height: 1.05;
+  margin-bottom: 32px; 
+}
+.section-featured {
+  padding: 1rem 0 0 0;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #888;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 2.5rem;
+  opacity: 50%;
+}
+
+.container {
+  
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+
+ 
+body.dark-theme .section-hero {
+  background-color: #222;
+}
+
+body.dark-theme .hero-text-box h1 {
+  color: #eaeaea;
+}
+body.dark-theme .hero-text-box p {
+  color: #eaeaea;
+}
+
+body.dark-theme .heading-primary {
+  color: #fff;
+}
+
+body.dark-theme .hero-img {
+  filter: brightness(70%);
+}
+
+body.dark-theme .logos img {
+  opacity: 80%;
+}
+
+
+ 
+@media screen and (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;  
+    gap: 48px;  
+  }
+
+  .hero-description {
+    font-size: 18px; 
+  }
+
+  .heading-primary {
+    font-size: 40px; 
+  }
+
+  .logos img {
+    height: 2rem;  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-hero {
+    padding: 32px 0 64px 0;  
+  }
+
+  .hero-description {
+    font-size: 16px; 
+  }
+
+  .heading-primary {
+    font-size: 36px;  
+  }
+
+  .logos img {
+    height: 1.5rem;  
+
+  .container {
+    padding: 0 2rem;  
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-hero {
+    padding: 24px 0 48px 0;  
+  }
+
+  .hero-description {
+    font-size: 14px;  
+  }
+
+  .heading-primary {
+    font-size: 28px;  
+  }
+
+  .logos img {
+    height: 1.2rem;  
+  }
+
+  .hero {
+    padding: 0 16px;  
+  }
+}
+}

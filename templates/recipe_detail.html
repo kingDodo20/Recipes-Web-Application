@@ -1,0 +1,51 @@
+{% extends "basehome.html" %}
+
+{% block title %}Recipes{% endblock %} 
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_detail.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="recipe-container">
+    <header class="recipe-header">
+        <h1>{{ recipe.title }}</h1>
+        <p class="recipe-description">{{ recipe.description }}</p>
+    </header>
+
+    <div class="recipe-image">
+        <img src="{{ url_for('static', filename='upload/' + recipe.image_name) }}" alt="{{ recipe.title }}">
+    </div>
+
+    <main class="recipe-content">
+        <section class="recipe-ingredients">
+            <h2>Ingredients</h2>
+            <ul>
+                {% for ingredient in recipe.ingredients %}
+                <li>{{ ingredient }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section class="recipe-instructions">
+            <h2>Instructions</h2>
+            <p>{{ recipe.instructions }}</p>
+        </section>
+
+        <section class="recipe-nutrition">
+            <h2>Nutrition Facts</h2>
+            <ul>
+                {% for fact in recipe.nutritionFacts.split(';') %}
+                <li>{{ fact }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+
+    <footer class="recipe-footer">
+        <a href="{{ url_for('recipesPage') }}" class="back-button">Back to Recipes</a>
+    </footer>
+</div>
+{% endblock %}
+
+

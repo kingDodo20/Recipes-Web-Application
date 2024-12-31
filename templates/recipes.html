@@ -1,0 +1,40 @@
+{% extends "basehome.html" %}
+
+{% block title %}Recipes{% endblock %} 
+
+{% block css%}
+<link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/recipes.css') }}"
+    />
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Welcome to our Recipe Collection!</h1>
+    <p>Discover mouth-watering recipes to satisfy your cravings.</p>
+</section>
+
+<section class="search">
+    <input type="text" id="searchInput" placeholder="Search for recipes...">
+</section>
+
+<div class="container">
+    <div class="recipes">
+        {% for recipe_name, recipe in recipes.items() %}
+        <a href="{{ url_for('recipe_detail', recipe_name=recipe_name) }}" class="btn"><div class="card">
+            <img src="{{ url_for('static', filename='upload/' + recipe.image_name) }}" alt="{{ recipe.title }}">
+            <div class="card-body">
+                <h2 class="card-title">{{ recipe.title }}</h2>
+                <p class="card-text">{{ recipe.description }}</p>
+            </div></a>
+        </div>
+        
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block js%}
+<script src="{{ url_for('static', filename='js/recipes.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "basehome.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="about-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>About Us</h1>
+            <p>Embark on a culinary journey with our curated recipes and cooking tips.</p>
+            <a href="{{ url_for('recipesPage') }}" class="cta-button">Explore Recipes</a>
+        </div>
+    </section>
+    <section class="about-content">
+        <div class="content-box">
+            <div class="icon">
+                <img src="{{ url_for('static', filename='images/chefs.jpg') }}" alt="Our Team">
+            </div>
+            <h2>Our Story</h2>
+            <p>
+                Founded by passionate chefs, our mission is to share the joy of cooking with everyone.
+            </p>
+        </div>
+        <div class="content-box">
+            <div class="icon">
+                <img src="{{ url_for('static', filename='images/chefsfood.jpg') }}" alt="Our Mission">
+            </div>
+            <h2>Our Mission</h2>
+            <p>
+                To inspire and empower home cooks with diverse and delicious recipes from around the world.
+            </p>
+        </div>
+        <div class="content-box">
+            <div class="icon">
+                <img src="{{ url_for('static', filename='images/community.jpg') }}" alt="Community">
+            </div>
+            <h2>Join Our Community</h2>
+            <p>
+                Connect with fellow food enthusiasts, share your creations, and discover new favorites.
+            </p>
+        </div>
+    </section>
+    <section class="team-section">
+        <h2>Meet the Team</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/chef1.jpg') }}" alt="Jane Doe">
+                <h3>Jane Doe</h3>
+                <p>Co-Founder & Head Chef</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/chef2.jpg') }}" alt="John Smith">
+                <h3>John Smith</h3>
+                <p>Co-Founder & Culinary Expert</p>
+            </div>
+        
+        </div>
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "basehome.html" %}
+
+{% block title %}Recipes{% endblock %} 
+{% block css%}
+<link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/home.css') }}"
+    />
+{% endblock %}
+
+{% block content %}
+  <section class="section-hero">
+    <div class="hero">
+      <div class="hero-text-box">
+        <h1 class="heading-primary">
+          A healthy meal made by you, every single day.
+        </h1>
+        <p class="hero-description">
+          The smart 365-days-per-year recipe collection that will inspire you to cook delicious meals. Tailored to your personal tastes and nutritional needs.
+        </p>
+        
+      </div>
+      <div class="hero-img-box">
+        <picture>
+          <source srcset="/static/images/hero.webp" type="image/webp" />
+          <source srcset="/static/images/hero-min.png" type="image/png" />
+
+          <img
+            src="/static/images/hero-min.png"
+            class="hero-img"
+            alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+          />
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-featured">
+    <div class="container">
+      <h2 class="heading-featured-in">As featured in</h2>
+      <div class="logos">
+        <img src="/static/images/logos/techcrunch.png" alt="Techcrunch logo" />
+        <img
+          src="/static/images/logos/business-insider.png"
+          alt="Business Insider logo"
+        />
+        <img
+          src="/static/images/logos/the-new-york-times.png"
+          alt="The New York Times logo"
+        />
+        <img src="/static/images/logos/forbes.png" alt="Forbes logo" />
+        <img src="/static/images/logos/usa-today.png" alt="USA Today logo" />
+      </div>
+    </div>
+  </section>
+{% endblock %}

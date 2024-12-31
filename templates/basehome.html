@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/basehome.css') }}"
+    />
+    {% block css %}
+    {% endblock %}
+  </head>
+  <body>
+    <nav>
+      <h1>Pela</h1>
+      <ul>
+        <li><a href="{{url_for('homepage')}}">Home</a></li>
+        <li><a href="{{url_for('about')}}">About</a></li>
+        <li><a href="{{url_for('recipesPage')}}">Recipes</a></li>
+        <li><a href="{{url_for('uploadRecipePage')}}">Upload</a></li>
+        <li><a href="{{url_for('profile')}}">Profile</a></li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+      </ul>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+
+      <button id="themeToggle">Toggle Theme</button>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    
+    <script src="{{ url_for('static', filename='js/themeToggle.js') }}"></script>
+    {% block js %}
+    {% endblock %}
+  </body>
+</html>

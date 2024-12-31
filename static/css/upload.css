@@ -1,0 +1,156 @@
+body{
+  background-color: rgb(230, 230, 230);
+}
+ 
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ 
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+ 
+form input[type="text"],
+form input[type="number"],
+form textarea,
+form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+ 
+form button {
+  background-color: #7FC57A;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #4caf50;
+}
+ 
+form input:focus,
+form textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+ 
+form input[type="file"] {
+  padding: 5px;
+}
+
+ 
+body.dark-theme{
+  background-color: #0F1015;
+}
+body.dark-theme form {
+  background-color: #191A1F;
+  color: #fff;
+}
+
+body.dark-theme form input,
+body.dark-theme form textarea {
+  background-color: #202127;
+  color: #fff;
+  border-color: #202127;
+}
+
+body.dark-theme form button {
+  background-color: #444;
+}
+
+body.dark-theme form button:hover {
+  background-color: #4caf50;
+}
+
+
+ 
+@media (max-width: 768px) {
+  form {
+      padding: 15px;
+  }
+
+  form button {
+      width: 100%;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  form {
+    padding: 15px;
+    max-width: 90%;  
+  }
+
+  form input[type="text"],
+  form input[type="number"],
+  form textarea,
+  form input[type="file"] {
+    padding: 8px;  
+  }
+
+  form button {
+    width: 100%;
+    padding: 12px 15px;  
+  }
+}
+
+ 
+@media (max-width: 768px) {
+  form {
+    padding: 15px;
+    max-width: 90%;  
+  }
+
+  form input[type="text"],
+  form input[type="number"],
+  form textarea,
+  form input[type="file"] {
+    padding: 8px;  
+  }
+
+  form button {
+    width: 100%;
+    padding: 12px 15px;  
+    font-size: 14px;  
+  }
+}
+
+ 
+@media (max-width: 480px) {
+  form {
+    padding: 12px;
+    max-width: 90%;  
+  }
+
+  form input[type="text"],
+  form input[type="number"],
+  form textarea,
+  form input[type="file"] {
+    padding: 6px;  
+  }
+
+  form button {
+    width: 100%;
+    padding: 12px 15px;  
+    font-size: 14px;  
+  }
+}
